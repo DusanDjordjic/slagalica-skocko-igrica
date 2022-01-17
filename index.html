@@ -9,13 +9,22 @@
   </head>
   <body>
     <div class="container">
-      <div class="flex big-fieds-wrapper">
-        <div id="input-rows-wrapper" class="rows-wrapper"></div>
-        <div id="guesses-rows-wrapper" class="rows-wrapper"></div>
+      <div class="flex gap-3">
+        <div id="move-rows-wrapper" class="moves-flex"></div>
+        <div class="w-100">
+          <div class="flex big-fieds-wrapper">
+            <div id="input-rows-wrapper" class="rows-wrapper"></div>
+            <div id="guesses-rows-wrapper" class="rows-wrapper"></div>
+          </div>
+
+          <div class="control-btns">
+            <button id="start-btn">Start</button>
+            <button id="reset-btn" style="display: none">Reset</button>
+            <button id="next-btn" style="display: none">Guess</button>
+          </div>
+        </div>
       </div>
-      <div>
-        <button id="next-btn">add new row</button>
-      </div>
+
       <div id="btn-wrapper" class="row"></div>
     </div>
 

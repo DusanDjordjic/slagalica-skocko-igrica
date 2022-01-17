@@ -15,19 +15,13 @@ body {
   height: 3rem;
   border-radius: 0.5rem;
   border: 1px solid #777;
-  background-color: rgb(246, 248, 255);
+  background-color: #f6f8ff;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: border 0.3s, box-shadow 0.3s;
   cursor: pointer;
   padding: 0.5rem;
-}
-.field.on-point {
-  background-color: rgb(255, 98, 98);
-}
-.field.exists {
-  background-color: rgb(255, 252, 98);
 }
 .field:hover {
   border-color: transparent;
@@ -36,6 +30,23 @@ body {
 .field:active {
   background-color: rgb(211, 220, 251);
 }
+.field.locked {
+  cursor: default;
+}
+.field.locked:hover {
+  border-color: #777;
+  box-shadow: none;
+}
+.field.locked:active {
+  background-color: #f6f8ff;
+}
+.field.on-point {
+  background-color: rgb(255, 98, 98);
+}
+.field.exists {
+  background-color: rgb(255, 252, 98);
+}
+
 .icon-btn.active {
   background-color: rgb(211, 220, 251);
 }
@@ -55,13 +66,57 @@ body {
   display: flex;
   gap: 1rem;
 }
+#guesses-rows-wrapper .row {
+  justify-content: flex-end;
+}
 .rows-wrapper {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 1rem;
 }
 .big-fieds-wrapper {
+  width: 100%;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: nowrap;
   gap: 3rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+.moves-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.moves-flex .field {
+  background-color: #1c1c1c;
+  color: #f6f8ff;
+  border: 1px solid #1c1c1c;
+  font-size: 1.2rem;
+}
+.control-btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.control-btns button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 100rem;
+  border: 1px solid #1c1c1c;
+  background-color: #f6f8ff;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  font-size: 1.2rem;
+}
+.control-btns button:hover {
+  color: #f6f8ff;
+  background-color: #1c1c1c;
+}
+.w-100 {
+  width: 100%;
 }

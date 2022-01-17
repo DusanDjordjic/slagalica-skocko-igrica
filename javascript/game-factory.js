@@ -7,15 +7,20 @@ class GameFactory {
     row.classList.add("row");
     return row;
   }
-  createField() {
+  createSimpleField() {
     const field = this.createDiv();
     field.classList.add("field");
+    return field;
+  }
+  createField() {
+    const field = this.createSimpleField();
     field.addEventListener("click", fieldClick.bind(field));
     return field;
   }
+
   createGuessField(type) {
-    const field = this.createDiv();
-    field.classList.add("field");
+    const field = this.createSimpleField();
+    field.classList.add("locked");
     switch (type) {
       case 1:
         field.classList.add("on-point");
@@ -24,6 +29,12 @@ class GameFactory {
         field.classList.add("exists");
         break;
     }
+    return field;
+  }
+
+  createMoveField(text, max) {
+    const field = this.createSimpleField();
+    field.textContent = `${text}/${max}`;
     return field;
   }
 }

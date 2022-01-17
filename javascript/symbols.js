@@ -11,12 +11,12 @@ symbols = [
     id: 3,
     name: "cat.svg",
   },
-  {
-    id: 4,
-    name: "crown.svg",
-  },
-  {
-    id: 5,
-    name: "heart.svg",
-  },
+  //   {
+  //     id: 4,
+  //     name: "crown.svg",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "heart.svg",
+  //   },
 ];
